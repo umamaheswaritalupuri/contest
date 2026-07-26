@@ -9,7 +9,6 @@ APP_VERSION = "1.0.0"
 def get_version() -> str:
     return APP_VERSION
 
-
 def build() -> None:
     """Create dist/version.txt for the CI artifact pipeline."""
     dist = Path("dist")
