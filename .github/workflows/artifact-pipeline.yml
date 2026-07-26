@@ -31,7 +31,8 @@ jobs:
 
        - uses: actions/download-artifact@v8
          with:
-           name: dist/version.txt
+           name: app-build
+           path: dist/version.txt
 
        - name: Display structure of downloaded files
          run: cat dist/version.txt
