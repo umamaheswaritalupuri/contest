@@ -19,8 +19,7 @@ jobs:
        - uses: actions/upload-artifact@v7
          with:
            name: app-build
-           path: |
-             dist/version.txt
+           path: dist/version.txt
              
   test:
     runs-on:  ubuntu-latest
