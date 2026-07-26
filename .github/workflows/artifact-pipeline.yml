@@ -36,4 +36,4 @@ jobs:
            path: dist
          
        - name: Display structure of downloaded files
-         run: cat dist/verison.txt
+         run: cat dist/version.txt
