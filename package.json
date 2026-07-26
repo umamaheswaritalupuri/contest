@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-ci",
+  "version": "1.0.0",
+  "description": "Starter Node.js app for the GitHub Actions CI lab",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/index.test.js",
+    "build": "node scripts/build.js"
+  }
+}
