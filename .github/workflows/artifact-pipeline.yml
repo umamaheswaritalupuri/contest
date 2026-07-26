@@ -1,5 +1,4 @@
 name: Build and Test Pipeline
-
 on:
    push:
    pull_request: 
