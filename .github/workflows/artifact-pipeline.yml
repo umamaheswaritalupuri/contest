@@ -14,9 +14,11 @@ jobs:
          uses: actions/checkout@v7
 
        - name: build-output
-         run: mkdir -p dist && echo "1.0.0" > dist/version.txt 
+         run: |
+           mkdir -p dist
+           echo "1.0.0" > dist/version.txt 
 
-       - uses: actions/upload-artifact@v7
+       - uses: actions/upload-artifact@v4
          with:
            name: app-build
            path: dist/version.txt
@@ -31,6 +33,7 @@ jobs:
        - uses: actions/download-artifact@v8
          with:
            name: app-build
+           path: dist
          
        - name: Display structure of downloaded files
          run: cat dist/verison.txt
