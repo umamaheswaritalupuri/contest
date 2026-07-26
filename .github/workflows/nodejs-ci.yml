@@ -1,27 +1,26 @@
-name:  Node.js CI
-
+name: Node.js CI
 on:
   push:
-  pull_request:
-    - main
-
+  pull_request: 
+    branches:
+      - main
 jobs:
   ci:
     runs-on: ubuntu:latest
     steps:
       - name: checkout
-        uses: actions/checkout
+        uses: actions/checkout@v7
       - name: setup nodejs
-        uses: actions/setup-node
+        uses: actions/setup-node@v7
         with:
           node-version: '20'
       - name: cache
-        uses: actions/cache
+        uses: actions/cache@v6
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-   
-      - runs: npm ci
-      - runs: npm test
-      - runs: npm run build    
+      - run: npm ci
+      - run: npm test
+      - run: npm run build    
