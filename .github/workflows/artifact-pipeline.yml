@@ -1,0 +1,4 @@
+name: Build and Test Pipeline
+
+on: push
+  branch: master
